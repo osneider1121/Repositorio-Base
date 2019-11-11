@@ -1,0 +1,50 @@
+<div class="" style="background-color:">
+
+    <div class="row" style="margin-bottom: 10px;;">
+        <div class="col-lg-10">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="input-group">
+                    <input type="hidden" name="search_param" value="all" id="search_param"> <input type="text" class="form-control" name="x" placeholder="Buscar parametros...">
+                    <span class="input-group-btn">
+                                <button class="btn btn-info" type="button">Buscar</button>
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"><button class="btn btn-info" (click)="NuevoParametro()">NUEVO PARAMETRO</button></div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                Parametros
+            </h3>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">CODIGO</th>
+                        <th scope="col">VALOR</th>
+                        <th scope="col">ACCIONES</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let para of parametros">
+                        <th scope="row">{{para.id}}</th>
+                        <td>{{para.code}}</td>
+                        <td>{{para.value}}</td>
+                        <td>
+                            <button class="btn btn-warning" (click)="Editar(para)">EDITAR</button>
+                            <button class="btn btn-danger" (click)="Eliminar(para)">ELIMINAR</button>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

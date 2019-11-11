@@ -1,0 +1,80 @@
+<div class="container col-md-10">
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                Modificar datos de {{persona.nombres}}
+            </h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <table class="table table-light">
+
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="">Nombres :</label>
+                                <input [(ngModel)]="persona.nombres" type="text" name="nombres" class="form-control">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="">Apellidos :</label>
+                                <input [(ngModel)]="persona.apellidos" type="text" name="apellidos" class="form-control">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="">Identificacion :</label>
+                                <input [(ngModel)]="persona.numeroId" type="number" name="numeroId" class="form-control">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="">Usuario :</label>
+                                <input [(ngModel)]="persona.usuario" type="text" name="usuario" class="form-control">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="">Clave :</label>
+                                <input [(ngModel)]="persona.clave" type="text" name="clave" class="form-control">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="">Tipo de Identificacion :</label>
+                                <input [(ngModel)]="persona.tipoIdentificacion" type="number" name="tipoIdentificacion" class="form-control">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="">Edad :</label>
+                                <input [(ngModel)]="persona.edad" type="number" name="edad" class="form-control">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="">Direccion :</label>
+                                <input [(ngModel)]="persona.direccion" type="text" name="direccion" class="form-control">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label for="">Telefono :</label>
+                                <input [(ngModel)]="persona.telefono" type="number" name="telefono" class="form-control">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <button (click)="Actualizar(persona)" class="btn btn-info">Actualizar</button>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

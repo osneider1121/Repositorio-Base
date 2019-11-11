@@ -1,0 +1,64 @@
+<div class="" style="background-color:">
+
+    <div class="row" style="margin-bottom: 10px;;">
+        <div class="col-lg-10">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="input-group">
+                    <input type="hidden" name="search_param" value="all" id="search_param"> <input type="text" class="form-control" name="x" placeholder="Buscar personas...">
+                    <span class="input-group-btn">
+                            <button class="btn btn-info" type="button">Buscar</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"><button class="btn btn-info" (click)="NuevaPersona()">NUEVA PERSONA</button></div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                Personas
+            </h3>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">NOMBRES</th>
+                        <th scope="col">APELLIDOS</th>
+                        <th scope="col">IDENTIFICACION</th>
+                        <th scope="col">USUARIO</th>
+                        <th scope="col">CLAVE</th>
+                        <th scope="col">TIPO DE IDENTIFICACION</th>
+                        <th scope="col">EDAD</th>
+                        <th scope="col">DIRECCION</th>
+                        <th scope="col">TELEFONO</th>
+                        <th scope="col">ACCIONES</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let persona of personas">
+                        <th scope="row">{{persona.id}}</th>
+                        <td>{{persona.nombres}}</td>
+                        <td>{{persona.apellidos}}</td>
+                        <td>{{persona.numeroId}}</td>
+                        <td>{{persona.usuario}}</td>
+                        <td>{{persona.clave}}</td>
+                        <td>{{persona.tipoIdentificacion}}</td>
+                        <td>{{persona.edad}}</td>
+                        <td>{{persona.direccion}}</td>
+                        <td>{{persona.telefono}}</td>
+                        <td>
+                            <button class="btn btn-warning" (click)="Editar(persona)">EDITAR</button>
+                            <button class="btn btn-danger" (click)="Eliminar(persona)">ELIMINAR</button>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
